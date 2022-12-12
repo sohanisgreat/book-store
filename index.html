@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Store</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Book Details</h2>
+        <div class="form">
+            <div class="inputs"> 
+                <label for="book-title">Book Title: </label>
+                <input class="validate" type="text" id="title">
+            </div> <br> <br> 
+        <div class="inputs">
+                <label>Book Description: </label>
+                <textarea class="validate" id="desc" cols="30" rows="10"></textarea>
+            </div>  
+        <div class="inputs">
+                <label for="book-author">Book Author: </label>
+                <input class="validate" type="text" id="author">
+            </div>    
+        <div class="inputs">
+                <label for="book-link">PDF Link: </label>
+                <input class="validate" type="text" id="link">
+            </div>  
+        <div class="inputs">
+                <input type="button" onclick="addToLibrary()" value="Add Book">
+                <input type="button" onclick="resetForm()" value="Reset">
+                <input type="button" onclick="showLibrary()" value="Show All">
+            </div>
+        </div>
+    </div>
+</br>
+    <div id="library-div" style="display: none;"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
