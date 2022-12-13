@@ -5,34 +5,57 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Enter Book Details</h2>
+    <div class="login" id="loginPage">
+        <div class="container">
+            <div class="inputs">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="inputs">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <input type="button" value="Login" onclick="login()">
+        </div>
+
+        <label id="error" style="display: none; color: red;">Incorrect username or password</label>
+    </div>
+
+    <div class="form-container" id="bookPage" style="display: none;">
+        <input type="button" value="Logout" onclick="logout()">
         <div class="form">
-            <div class="inputs"> 
+            <h2>Enter Book Details</h2>
+            <div class="inputs">
                 <label for="book-title">Book Title: </label>
                 <input class="validate" type="text" id="title">
-            </div> <br> <br> 
-        <div class="inputs">
+            </div>
+            <div class="inputs">
                 <label>Book Description: </label>
-                <textarea class="validate" id="desc" cols="30" rows="10"></textarea>
-            </div> <br> <br>  
-        <div class="inputs">
-                <label for="book-author">Book Author: </label>
+                <textarea class="validate" id="desc" cols="30" rows="6" style="vertical-align: top;"></textarea>
+            </div>
+            <div class="inputs">
+                <label for="book-author">Author Name: </label>
                 <input class="validate" type="text" id="author">
-            </div> <br> <br>   
-        <div class="inputs">
+            </div>
+            <div class="inputs">
                 <label for="book-link">PDF Link: </label>
-                <input class="validate" type="text" id="link">
-            </div> <br> <br> 
-        <div class="inputs">
+                <input class="validate" type="text" id="pdflink">
+            </div>
+            <div class="inputs">
+                <label for="img-link">Image Link: </label>
+                <input class="validate" type="text" id="imglink">
+            </div>
+            <div class="inputs buttons">
                 <input type="button" onclick="addToLibrary()" value="Add Book">
                 <input type="button" onclick="resetForm()" value="Reset">
                 <input type="button" onclick="showLibrary()" value="Show All">
             </div>
+            <label id="form-status" style="display: none; font-size: 20px; color: green;">Book Added!!</label>
+        </div>
+
+        <div id="library-div" class="form" style="display: none;">
         </div>
     </div>
-</br>
-    <div id="library-div" style="display: none;"></div>
 
     <script src="./script.js"></script>
 </body>
